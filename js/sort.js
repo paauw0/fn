@@ -12,7 +12,7 @@ var sortAsc = function(x, y) { return x - y }
 var sortDesc = function(x, y) { return y - x } 
 
 Array.prototype.st = function(fn) {  
-    if (fn && typeof fn !== 'function') throw new TypeError('arguments need be a function!')
+    if (fn !== undefined && typeof fn !== 'function') throw new TypeError('arguments need be a function!')
 
     var t
 
@@ -31,7 +31,7 @@ Array.prototype.st = function(fn) {
     }  
 } 
 
-// arr.st() 
+// arr.st()
 // console.log("默认升序排列：" + arr) 
 
 // arr1.st(sortDesc) 
